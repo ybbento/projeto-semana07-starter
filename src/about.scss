@@ -4,30 +4,51 @@
 	margin-top: 61px;
 	flex-direction: column;
 	padding: 32px 16px 24px 16px;
+	@media (min-width: 992px) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
 	&-card {
 		display: flex;
 		flex-direction: column;
+		@media (min-width: 992px) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
 
 		&-image {
 			border-radius: 8px;
 			width: 100%;
 			height: auto;
+			@media (min-width: 992px) {
+				max-width: 442px;
+				margin-right: 140px;
+			}
 		}
-		&-title {
-			color: white;
-			font-size: 34px;
-			line-height: 40px;
-			margin: 24px 0;
-			letter-spacing: 0.25px;
-		}
-		&-text {
-			color: white;
-			font-size: 16px;
-			line-height: 28px;
-			letter-spacing: 0.44px;
-			margin-bottom: 10px;
-			&-mail {
-				color: $primaryColor;
+		&-infos {
+			@media (min-width: 992px) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&-title {
+				color: white;
+				font-size: 34px;
+				line-height: 40px;
+				margin: 24px 0;
+				letter-spacing: 0.25px;
+			}
+			&-text {
+				color: white;
+				font-size: 16px;
+				line-height: 28px;
+				letter-spacing: 0.44px;
+				margin-bottom: 10px;
+				&-mail {
+					color: $primaryColor;
+				}
 			}
 		}
 	}
@@ -36,9 +57,33 @@
 .cards {
 	padding-left: 15px;
 	padding-right: 15px;
-
+	@media (min-width: 992px) {
+		padding-left: 165px;
+		padding-right: 165px;
+	}
+	&-title {
+		font-size: 24px;
+		line-height: 32px;
+		color: white;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 32px;
+		text-align: center;
+	}
 	&-box {
+		@media (min-width: 992px) {
+			// display: flex;
+			// flex-wrap: wrap;
+			// margin: 0 auto;
+			// tentei fazer com flex, mas depois vi que com grid é melhor
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 		&-item {
+			@media (min-width: 992px) {
+				// flex: 1 1 200px;
+				margin-right: 24px;
+			}
 			padding: 16px;
 			background-color: $colorRellenos;
 
@@ -60,15 +105,6 @@
 				font-weight: 500;
 				line-height: 24px;
 			}
-		}
-		&-title {
-			font-size: 24px;
-			line-height: 32px;
-			color: white;
-			font-weight: 400;
-			margin-top: 0;
-			margin-bottom: 32px;
-			text-align: center;
 		}
 	}
 }
