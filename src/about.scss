@@ -3,7 +3,7 @@
 .about {
 	margin-top: 61px;
 	flex-direction: column;
-	padding: 32px 16px 24px 16px;
+	padding: 32px 16px 0px 16px;
 	@media (min-width: 992px) {
 		padding-left: 10%;
 		padding-right: 10%;
@@ -39,6 +39,10 @@
 				line-height: 40px;
 				margin: 24px 0;
 				letter-spacing: 0.25px;
+				@media (min-width: 992px) {
+					font-size: 60px;
+					line-height: 71px;
+				}
 			}
 			&-text {
 				color: white;
@@ -47,7 +51,11 @@
 				letter-spacing: 0.44px;
 				margin-bottom: 10px;
 				&-mail {
+					margin: 0;
+					align-self: flex-start;
 					color: $primaryColor;
+
+					//a foto ficou desalinhada pq não tinha uma maior
 				}
 			}
 		}
@@ -69,6 +77,12 @@
 		margin-top: 0;
 		margin-bottom: 32px;
 		text-align: center;
+		@media (min-width: 992px) {
+			margin-top: 128px;
+			font-size: 34px;
+			line-height: 40px;
+			margin-bottom: 60px;
+		}
 	}
 	&-box {
 		@media (min-width: 992px) {
@@ -78,13 +92,18 @@
 			// tentei fazer com flex, mas depois vi que com grid é melhor
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
+			padding-bottom: 104px;
+			//104 + 24 do margin bottom da dil item(só fiz a soma)
 		}
 		&-item {
 			@media (min-width: 992px) {
 				// flex: 1 1 200px;
 				margin-right: 24px;
+				width: auto;
+				height: auto;
+				padding: 0px 24px 24px 0px;
 			}
-			padding: 16px;
+			padding: 0 16px 16px 0;
 			background-color: $colorRellenos;
 
 			flex-direction: column;
@@ -94,16 +113,36 @@
 
 			p {
 				font-size: 14px;
+				padding-left: 16px;
 				margin: 0;
-				letter-spacing: 0.15px;
+				letter-spacing: 0.25px;
+				@media (min-width: 992px) {
+					font-size: 16px;
+					line-height: 28px;
+					margin: 0;
+					letter-spacing: 0.44px;
+					padding-left: 24px;
+				}
 			}
 			h2 {
+				@media (min-width: 992px) {
+					padding-left: 24px;
+					font-size: 34px;
+					line-height: 40px;
+					margin: 0;
+					margin-top: 16px;
+				}
+				padding-left: 16px;
 				font-size: 20px;
 				letter-spacing: 0.25px;
 				margin-bottom: 10px;
-				margin-top: 16.25px;
+
 				font-weight: 500;
 				line-height: 24px;
+			}
+			&-logo {
+				padding-left: 22px;
+				padding-top: 24px;
 			}
 		}
 	}
