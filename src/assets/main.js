@@ -23,6 +23,16 @@ window.onload = () => {
 			isClosed = true;
 		}
 	});
-};
 
-console.log("teste");
+	const form = document.querySelector(".contact-form");
+
+	form.addEventListener("submit", (event) => {
+		event.preventDefault();
+		const data = {
+			title: event.target[0].value,
+			email: event.target[1].value,
+			message: event.target[2].value,
+		};
+		console.log(data);
+	});
+};
