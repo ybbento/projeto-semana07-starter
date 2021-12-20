@@ -1,0 +1,43 @@
+@import "_variables", "_styles";
+
+.contact {
+	margin-top: 93px;
+	padding: 16px;
+	text-align: center;
+	color: white;
+	&-title {
+		margin: 0;
+		font-weight: 500;
+		font-size: 34px;
+		line-height: 40px;
+		padding-bottom: 16px;
+		// color: white;
+	}
+	&-text {
+		margin: 0;
+		font-size: 14px;
+		letter-spacing: 0.1px;
+		line-height: 24px;
+		padding-bottom: 24px;
+	}
+
+	&-form {
+		background: $grayBorder;
+		border-radius: 8px;
+		padding-left: 24px;
+		padding-right: 24px;
+		&-label {
+			font-size: 16px;
+
+			&-title {
+				margin: 0;
+				text-align: start;
+				line-height: 28px;
+				padding-bottom: 8px;
+				padding-top: 24px;
+			}
+			&-text {
+			}
+		}
+	}
+}
