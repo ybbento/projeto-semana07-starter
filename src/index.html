@@ -18,9 +18,9 @@
 		<main>
 			<header>
 				<nav class="navbar">
-					<a href="./"
-						><div class="container flex align-center justify-between">
-							<svg
+					<div class="container flex align-center justify-between">
+						<a href="./"
+							><svg
 								width="85"
 								height="24"
 								viewBox="0 0 85 24"
@@ -32,12 +32,15 @@
 									fill="white"
 								/>
 							</svg>
-							<div class="navbar-links">
-								<a class="navbar-link" href="./index.html">Início</a>
-								<a class="navbar-link" href="./about.html">Sobre mim</a>
-								<a class="navbar-link" href="">Contato</a>
-							</div>
-							<button class="burger-button">
+						</a>
+
+						<div class="navbar-links">
+							<a class="navbar-link" href="./index.html">Início</a>
+							<a class="navbar-link" href="./about.html">Sobre mim</a>
+							<a class="navbar-link" href="">Contato</a>
+						</div>
+						<button class="burger-button" id="burger-button">
+							<div class="burger-button-icon">
 								<svg
 									width="18"
 									height="14"
@@ -53,15 +56,57 @@
 										stroke-linejoin="round"
 									/>
 								</svg>
-							</button></div
-					></a>
+							</div>
+							<div class="burger-button-icon-close">
+								<svg
+									width="14"
+									height="16"
+									viewBox="0 0 14 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M1 2.12305L13 14.123L10.5 11.623L8 9.12305M1 14.123L13 1.87695"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+							</div>
+						</button>
+					</div>
 				</nav>
+				<div class="burger-button-menu" id="burger-menu">
+					<ul class="burger-button-menu-list">
+						<li>
+							<a href="./index.html" class="burger-button-menu-list-link"
+								>Inicio</a
+							>
+						</li>
+						<li>
+							<a href="./about.html" class="burger-button-menu-list-link"
+								>Sobre mim</a
+							>
+						</li>
+						<li>
+							<a href="./contact.html" class="burger-button-menu-list-link"
+								>Contato</a
+							>
+						</li>
+					</ul>
+				</div>
 				<div class="my-info">
 					<h1 class="my-info-title">
 						Sou <span class="my-info-title-name">Yan Barros Bento</span>
 					</h1>
 					<div class="my-info-buttons">
-						<button class="button button__solid">Entrar em contato</button>
+						<a href="./contact.html"
+							><button class="button button__solid">
+								Entrar em contato
+							</button></a
+						>
+
 						<button class="button button__outlined">
 							<svg
 								width="14"
@@ -143,7 +188,7 @@
 						</div>
 						<div class="footer-column">
 							<p class="footer-column-name">Contato</p>
-							<a class="footer-column-link" href="#">Email</a>
+							<a class="footer-column-link" href="./contact.html">Email</a>
 						</div>
 						<div class="footer-column">
 							<p class="footer-column-name">Social</p>
@@ -169,5 +214,7 @@
 				</div>
 			</footer>
 		</main>
+
+		<script src="assets/main.js"></script>
 	</body>
 </html>

@@ -112,6 +112,39 @@ button {
 	}
 }
 
+.burger-button-icon-close {
+	display: none;
+}
+.burger-button-menu {
+	display: none;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 65px;
+
+	z-index: 999;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+
+	background-color: $backgroundColor;
+
+	&-list {
+		margin: 0;
+		list-style-type: none;
+		padding-top: 28px;
+		padding-left: 16px;
+		li {
+			margin-bottom: 40px;
+		}
+		&-link {
+			text-decoration: none;
+			color: white;
+
+			text-align: center;
+		}
+	}
+}
 // classes genéricas
 
 .button {
